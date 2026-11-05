@@ -172,7 +172,7 @@ def laporan_harian():
     total_transaksi = len(daftar)
     total_omzet = sum(t[4] for t in daftar)
 
-    terjual: dict[str, int] = {}  # nama -> total jumlah terjual
+    terjual: dict[str, int] = {}  
     for _, _, nama, jumlah, _ in daftar:
         terjual[nama] = terjual.get(nama, 0) + jumlah
     terlaris = max(terjual, key=lambda nama: terjual[nama])
